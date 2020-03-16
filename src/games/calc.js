@@ -1,5 +1,5 @@
-import getRandomInteger from './getRandomInteger.js';
-import start from './start.js';
+import getRandomInteger from '../utils/getRandomInteger.js';
+import start from '../start.js';
 
 const description = 'Answer "yes" if number is even otherwise answer "no".';
 

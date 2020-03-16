@@ -1,14 +1,15 @@
-import readlineSync from 'readline-sync';
+import getUserName from './utils/getUserName.js';
+import greeting from './utils/greeting.js';
 
 /**
- * Greets user
+ * Launches game
  */
-const greeting = () => {
-    const name = readlineSync.question('May I have your name?');
+const launchGame = () => {
+    console.log('Welcome to the Brain Games!');
 
-    console.log(`Hello, ${name}!`);
+    const userName = getUserName();
 
-    return name;
+    greeting(userName);
 };
 
-export default greeting;
+export default launchGame;

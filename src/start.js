@@ -1,5 +1,6 @@
 import readlineSync from 'readline-sync';
-import greeting from './index.js';
+import getUserName from './utils/getUserName.js';
+import greeting from './utils/greeting.js';
 
 const requiredSuccessAttempts = 3;
 
@@ -15,7 +16,11 @@ const say = (text = '') => console.log(text);
  * @param {Function} getData - returns question and correct result
  */
 const start = (description, getData) => {
-    const userName = greeting();
+    say('Welcome to the Brain Games!');
+
+    const userName = getUserName();
+
+    greeting(userName);
 
     say(description);
 
