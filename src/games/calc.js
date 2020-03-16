@@ -52,6 +52,6 @@ const getData = () => {
     return { question, answer };
 };
 
-const even = () => start(description, getData);
+const calc = () => start(description, getData);
 
-export default even;
+export default calc;
