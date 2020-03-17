@@ -9,3 +9,6 @@
 
 ## Brain gcd game
 [![asciicast](https://asciinema.org/a/vfZjtOCU8szK7579N8mVnZWEt.svg)](https://asciinema.org/a/vfZjtOCU8szK7579N8mVnZWEt)
+
+## Brain progression game
+[![asciicast](https://asciinema.org/a/QfCq0cgazU2zmfagITR3Ql0gw.svg)](https://asciinema.org/a/QfCq0cgazU2zmfagITR3Ql0gw)
