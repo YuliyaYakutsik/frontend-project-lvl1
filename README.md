@@ -2,16 +2,16 @@
 [![Maintainability](https://api.codeclimate.com/v1/badges/0edfbe0ecca263b72212/maintainability)](https://codeclimate.com/github/YuliyaYakutsik/frontend-project-lvl1/maintainability)
 
 ## Brain even game
-[![asciicast](https://asciinema.org/a/MQkXryoweKNcEOAmPuTQXErVo.svg)](https://asciinema.org/a/MQkXryoweKNcEOAmPuTQXErVo)
+[![asciicast](https://asciinema.org/a/y9Iue6JxoyH3mOLzXxJGJ224B.svg)](https://asciinema.org/a/y9Iue6JxoyH3mOLzXxJGJ224B)
 
 ## Brain calc game
-[![asciicast](https://asciinema.org/a/QPubfQVy385VXpxWrdjPZnhTD.svg)](https://asciinema.org/a/QPubfQVy385VXpxWrdjPZnhTD)
+[![asciicast](https://asciinema.org/a/y4JvgJR3vzEHtRRm0laaAY4so.svg)](https://asciinema.org/a/y4JvgJR3vzEHtRRm0laaAY4so)
 
 ## Brain gcd game
-[![asciicast](https://asciinema.org/a/vfZjtOCU8szK7579N8mVnZWEt.svg)](https://asciinema.org/a/vfZjtOCU8szK7579N8mVnZWEt)
+[![asciicast](https://asciinema.org/a/YzXtWp4jWZWkc4ZLMSjUCBHTm.svg)](https://asciinema.org/a/YzXtWp4jWZWkc4ZLMSjUCBHTm)
 
 ## Brain progression game
-[![asciicast](https://asciinema.org/a/QfCq0cgazU2zmfagITR3Ql0gw.svg)](https://asciinema.org/a/QfCq0cgazU2zmfagITR3Ql0gw)
+[![asciicast](https://asciinema.org/a/Lq29cljxPZgaJ37FtbGTyDdAM.svg)](https://asciinema.org/a/Lq29cljxPZgaJ37FtbGTyDdAM)
 
 ## Brain prime game
-[![asciicast](https://asciinema.org/a/zpnFclTk5KnKJUzMYzOK4sBhC.svg)](https://asciinema.org/a/zpnFclTk5KnKJUzMYzOK4sBhC)
+[![asciicast](https://asciinema.org/a/0T3EcSAWnC1NItZoZcZZaZQ82.svg)](https://asciinema.org/a/0T3EcSAWnC1NItZoZcZZaZQ82)
