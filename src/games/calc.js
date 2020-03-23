@@ -1,41 +1,38 @@
-import exprEval from 'expr-eval';
 import getRandomInteger from '../utils/getRandomInteger.js';
 import start from '../start.js';
 
 const description = 'What is the result of the expression?';
 
 /**
- * Generates maths sign
- * @param {Number} number
- * @returns {String}
+ * Generates maths expression
+ * @param {Number} num1
+ * @param {Number} num2
+ * @param {Number} signType
+ * @returns {Object}
  */
-const getRandomSign = (number) => {
-    switch (number) {
+const getExpression = (num1, num2, signType) => {
+    switch (signType) {
     case 1:
-        return '+';
+        return {
+            question: `${num1} + ${num2}`,
+            result: num1 + num2,
+        };
 
     case 2:
-        return '-';
+        return {
+            question: `${num1} - ${num2}`,
+            result: num1 - num2,
+        };
 
     case 3:
-        return '*';
+        return {
+            question: `${num1} * ${num2}`,
+            result: num1 * num2,
+        };
 
     default:
-        return false;
+        return null;
     }
-};
-
-/**
- * Generates maths expression
- * @returns {String}
- */
-const getExpression = () => {
-    const num1 = getRandomInteger(1, 100);
-    const num2 = getRandomInteger(1, 100);
-    const signId = getRandomInteger(1, 3);
-    const sign = getRandomSign(signId);
-
-    return `${num1} ${sign} ${num2}`;
 };
 
 /**
@@ -43,11 +40,12 @@ const getExpression = () => {
  * @returns {Object}
  */
 const getData = () => {
-    const question = getExpression();
-    const { Parser } = exprEval;
-    const parser = new Parser();
-    const expression = parser.parse(question);
-    const answer = expression.evaluate().toString();
+    const num1 = getRandomInteger(1, 100);
+    const num2 = getRandomInteger(1, 100);
+    const signId = getRandomInteger(1, 3);
+    const expression = getExpression(num1, num2, signId);
+    const { question } = expression;
+    const answer = expression.result.toString();
 
     return { question, answer };
 };
