@@ -1,6 +1,4 @@
 import readlineSync from 'readline-sync';
-import getUserName from './utils/getUserName.js';
-import greeting from './utils/greeting.js';
 
 const requiredSuccessAttempts = 3;
 
@@ -18,9 +16,9 @@ const say = (text = '') => console.log(text);
 const start = (description, getData) => {
     say('Welcome to the Brain Games!');
 
-    const userName = getUserName();
+    const userName = readlineSync.question('May I have your name?');
 
-    greeting(userName);
+    say(`Hello, ${userName}!`);
 
     say(description);
 

@@ -1,7 +1,12 @@
 {
   "name": "frontend-project-lvl1",
-  "version": "1.10.0",
-  "description": "",
+  "version": "1.11.0",
+  "description": "Hexlet project 1. Brain games.",
+  "keywords": [
+    "brain",
+    "games",
+    "hexlet"
+  ],
   "main": "src/index.js",
   "bin": {
     "brain-games": "bin/brain-games.js",
@@ -19,16 +24,18 @@
     "type": "git",
     "url": "git+https://github.com/YuliyaYakutsik/frontend-project-lvl1.git"
   },
-  "author": "",
+  "author": "Yuliya Yakutsik",
   "license": "ISC",
   "bugs": {
     "url": "https://github.com/YuliyaYakutsik/frontend-project-lvl1/issues"
   },
   "homepage": "https://github.com/YuliyaYakutsik/frontend-project-lvl1#readme",
-  "dependencies": {
+  "devDependencies": {
     "eslint": "^6.8.0",
     "eslint-config-airbnb-base": "^14.0.0",
-    "eslint-plugin-import": "^2.20.1",
+    "eslint-plugin-import": "^2.20.1"
+  },
+  "dependencies": {
     "expr-eval": "^2.0.2",
     "readline-sync": "^1.4.10"
   }

@@ -9,7 +9,7 @@ const description = 'Find the greatest common divisor of given numbers.';
  * parama {Number} num2
  * @returns {String}
  */
-const getGcd = (num1 = 1, num2 = 1) => {
+const getGcd = (num1, num2) => {
     let x = Math.abs(num1);
     let y = Math.abs(num2);
 

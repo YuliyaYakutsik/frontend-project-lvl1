@@ -10,6 +10,10 @@ const minNumber = 2;
  * @returns {Boolean}
  */
 const isPrime = (num) => {
+    if (num < 2) {
+        return false;
+    }
+
     if (num === 2) {
         return true;
     }

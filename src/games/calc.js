@@ -21,7 +21,7 @@ const getRandomSign = (number) => {
         return '*';
 
     default:
-        return '+';
+        return false;
     }
 };
 
