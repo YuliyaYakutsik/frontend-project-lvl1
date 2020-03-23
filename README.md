@@ -1,22 +1,24 @@
+# Brain games hexlet project
+
 ![Node.js CI](https://github.com/YuliyaYakutsik/frontend-project-lvl1/workflows/Node.js%20CI/badge.svg)
 [![Maintainability](https://api.codeclimate.com/v1/badges/0edfbe0ecca263b72212/maintainability)](https://codeclimate.com/github/YuliyaYakutsik/frontend-project-lvl1/maintainability)
 
 ## Setup
 
 ```
-make install
+$ make install
 ```
 
 ## Start
 
 ```
-make start
+$ make start
 ```
 
 ## Publish
 
 ```
-make publish
+$ make publish
 ```
 
 ## Brain even game
