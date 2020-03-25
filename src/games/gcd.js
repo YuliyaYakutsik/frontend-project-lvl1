@@ -10,16 +10,16 @@ const description = 'Find the greatest common divisor of given numbers.';
  * @returns {String}
  */
 const getGcd = (num1, num2) => {
-    let x = Math.abs(num1);
-    let y = Math.abs(num2);
+  let x = num1;
+  let y = num2;
 
-    while (y) {
-        const tempNum = y;
-        y = x % y;
-        x = tempNum;
-    }
+  while (y) {
+    const tempNum = y;
+    y = x % y;
+    x = tempNum;
+  }
 
-    return x;
+  return x;
 };
 
 /**
@@ -27,12 +27,12 @@ const getGcd = (num1, num2) => {
  * @returns {Object}
  */
 const getData = () => {
-    const num1 = getRandomInteger(1, 100);
-    const num2 = getRandomInteger(1, 100);
-    const question = `${num1} ${num2}`;
-    const answer = getGcd(num1, num2).toString();
+  const num1 = getRandomInteger(1, 100);
+  const num2 = getRandomInteger(1, 100);
+  const question = `${num1} ${num2}`;
+  const answer = getGcd(num1, num2).toString();
 
-    return { question, answer };
+  return { question, answer };
 };
 
 const gcd = () => start(description, getData);

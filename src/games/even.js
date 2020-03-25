@@ -15,10 +15,10 @@ const isEven = (num) => num % 2 === 0;
  * @returns {Object}
  */
 const getData = () => {
-    const question = getRandomInteger(1, 100);
-    const answer = isEven(question) ? 'yes' : 'no';
+  const question = getRandomInteger(1, 100);
+  const answer = isEven(question) ? 'yes' : 'no';
 
-    return { question, answer };
+  return { question, answer };
 };
 
 const even = () => start(description, getData);

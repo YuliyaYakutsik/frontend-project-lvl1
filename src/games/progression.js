@@ -21,20 +21,16 @@ const getProgressionSymbol = (startNum, dif, idx) => startNum + dif * (idx - 1);
  * parama {Number} quantity
  * @returns {String}
  */
-const getProgression = (startNum = 1, dif = 2, missedIdx = 2, quantity = progressLength) => {
-    const progression = [];
+const getProgression = (startNum, dif, quantity) => {
+  const progression = [];
 
-    for (let i = 1; i <= quantity; i += 1) {
-        const symbolValue = getProgressionSymbol(startNum, dif, i);
+  for (let i = 1; i <= quantity; i += 1) {
+    const symbolValue = getProgressionSymbol(startNum, dif, i);
 
-        if (i !== missedIdx) {
-            progression.push(symbolValue);
-        } else {
-            progression.push('..');
-        }
-    }
+    progression.push(symbolValue);
+  }
 
-    return progression;
+  return progression;
 };
 
 /**
@@ -42,13 +38,17 @@ const getProgression = (startNum = 1, dif = 2, missedIdx = 2, quantity = progres
  * @returns {Object}
  */
 const getData = () => {
-    const progressDif = getRandomInteger(1, 7);
-    const progressStart = getRandomInteger(1, 25);
-    const progressMissedIdx = getRandomInteger(1, progressLength);
-    const question = getProgression(progressStart, progressDif, progressMissedIdx).join(' ');
-    const answer = getProgressionSymbol(progressStart, progressDif, progressMissedIdx).toString();
+  const progressDif = getRandomInteger(1, 7);
+  const progressStart = getRandomInteger(1, 25);
+  const progressMissedIdx = getRandomInteger(1, progressLength);
+  const progression = getProgression(progressStart, progressDif, progressLength);
 
-    return { question, answer };
+  progression[progressMissedIdx - 1] = '..';
+
+  const question = progression.join(' ');
+  const answer = getProgressionSymbol(progressStart, progressDif, progressMissedIdx).toString();
+
+  return { question, answer };
 };
 
 const progression = () => start(description, getData);

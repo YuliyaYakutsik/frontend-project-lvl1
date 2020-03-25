@@ -10,26 +10,19 @@ const minNumber = 2;
  * @returns {Boolean}
  */
 const isPrime = (num) => {
-    if (num < 2) {
-        return false;
+  if (num < 2) {
+    return false;
+  }
+
+  const limit = Math.sqrt(num);
+
+  for (let i = 2; i <= limit; i += 1) {
+    if (num % i === 0) {
+      return false;
     }
+  }
 
-    if (num === 2) {
-        return true;
-    }
-
-    let i = 2;
-    const limit = Math.sqrt(num);
-
-    while (i <= limit) {
-        if (num % i === 0) {
-            return false;
-        }
-
-        i += 1;
-    }
-
-    return true;
+  return true;
 };
 
 /**
@@ -37,10 +30,10 @@ const isPrime = (num) => {
  * @returns {Object}
  */
 const getData = () => {
-    const question = getRandomInteger(minNumber, 100);
-    const answer = isPrime(question) ? 'yes' : 'no';
+  const question = getRandomInteger(minNumber, 100);
+  const answer = isPrime(question) ? 'yes' : 'no';
 
-    return { question, answer };
+  return { question, answer };
 };
 
 const progression = () => start(description, getData);

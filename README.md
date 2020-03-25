@@ -9,12 +9,6 @@
 $ make install
 ```
 
-## Start
-
-```
-$ make start
-```
-
 ## Publish
 
 ```
@@ -25,6 +19,12 @@ $ make publish
 
 ```
 $ npm link
+```
+
+## Start even game
+
+```
+$ make start
 ```
 
 ## Package install

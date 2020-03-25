@@ -14,40 +14,40 @@ const say = (text = '') => console.log(text);
  * @param {Function} getData - returns question and correct result
  */
 const start = (description, getData) => {
-    say('Welcome to the Brain Games!');
+  say('Welcome to the Brain Games!');
 
-    const userName = readlineSync.question('May I have your name?');
+  const userName = readlineSync.question('May I have your name?');
 
-    say(`Hello, ${userName}!`);
+  say(`Hello, ${userName}!`);
 
-    say(description);
+  say(description);
 
-    const launch = (attempt) => {
-        if (attempt === requiredSuccessAttempts) {
-            say(`Congratulations, ${userName}!`);
+  const launch = (attempt) => {
+    if (attempt === requiredSuccessAttempts) {
+      say(`Congratulations, ${userName}!`);
 
-            return;
-        }
+      return;
+    }
 
-        const { question, answer } = getData();
+    const { question, answer } = getData();
 
-        say(`Question: ${question}`);
+    say(`Question: ${question}`);
 
-        const userAnswer = readlineSync.question('Your answer: ');
+    const userAnswer = readlineSync.question('Your answer: ');
 
-        if (userAnswer !== answer) {
-            say(`'${userAnswer}' is wrong answer ;(. Correct answer was '${answer}'.\n`);
-            say(`Let's try again, ${userName}!`);
+    if (userAnswer !== answer) {
+      say(`'${userAnswer}' is wrong answer ;(. Correct answer was '${answer}'.\n`);
+      say(`Let's try again, ${userName}!`);
 
-            return;
-        }
+      return;
+    }
 
-        say('Correct!');
+    say('Correct!');
 
-        launch(attempt + 1);
-    };
+    launch(attempt + 1);
+  };
 
-    launch(0);
+  launch(0);
 };
 
 export default start;

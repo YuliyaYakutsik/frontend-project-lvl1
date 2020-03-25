@@ -2,6 +2,7 @@ import getRandomInteger from '../utils/getRandomInteger.js';
 import start from '../start.js';
 
 const description = 'What is the result of the expression?';
+const operations = ['+', '-', '*'];
 
 /**
  * Generates maths expression
@@ -11,28 +12,28 @@ const description = 'What is the result of the expression?';
  * @returns {Object}
  */
 const getExpression = (num1, num2, signType) => {
-    switch (signType) {
+  switch (signType) {
     case 1:
-        return {
-            question: `${num1} + ${num2}`,
-            result: num1 + num2,
-        };
+      return {
+        question: `${num1} + ${num2}`,
+        result: num1 + num2,
+      };
 
     case 2:
-        return {
-            question: `${num1} - ${num2}`,
-            result: num1 - num2,
-        };
+      return {
+        question: `${num1} - ${num2}`,
+        result: num1 - num2,
+      };
 
     case 3:
-        return {
-            question: `${num1} * ${num2}`,
-            result: num1 * num2,
-        };
+      return {
+        question: `${num1} * ${num2}`,
+        result: num1 * num2,
+      };
 
     default:
-        return null;
-    }
+      return null;
+  }
 };
 
 /**
@@ -40,14 +41,14 @@ const getExpression = (num1, num2, signType) => {
  * @returns {Object}
  */
 const getData = () => {
-    const num1 = getRandomInteger(1, 100);
-    const num2 = getRandomInteger(1, 100);
-    const signId = getRandomInteger(1, 3);
-    const expression = getExpression(num1, num2, signId);
-    const { question } = expression;
-    const answer = expression.result.toString();
+  const num1 = getRandomInteger(1, 100);
+  const num2 = getRandomInteger(1, 100);
+  const signId = getRandomInteger(1, operations.length);
+  const expression = getExpression(num1, num2, signId);
+  const { question } = expression;
+  const answer = expression.result.toString();
 
-    return { question, answer };
+  return { question, answer };
 };
 
 const calc = () => start(description, getData);
