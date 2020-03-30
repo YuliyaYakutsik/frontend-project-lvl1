@@ -13,23 +13,14 @@ const operations = ['+', '-', '*'];
  */
 const getExpression = (num1, num2, signType) => {
   switch (signType) {
-    case 1:
-      return {
-        question: `${num1} + ${num2}`,
-        result: num1 + num2,
-      };
+    case '+':
+      return num1 + num2;
 
-    case 2:
-      return {
-        question: `${num1} - ${num2}`,
-        result: num1 - num2,
-      };
+    case '-':
+      return num1 - num2;
 
-    case 3:
-      return {
-        question: `${num1} * ${num2}`,
-        result: num1 * num2,
-      };
+    case '*':
+      return num1 * num2;
 
     default:
       return null;
@@ -43,10 +34,10 @@ const getExpression = (num1, num2, signType) => {
 const getData = () => {
   const num1 = getRandomInteger(1, 100);
   const num2 = getRandomInteger(1, 100);
-  const signId = getRandomInteger(1, operations.length);
-  const expression = getExpression(num1, num2, signId);
-  const { question } = expression;
-  const answer = expression.result.toString();
+  const signId = getRandomInteger(0, operations.length - 1);
+  const signType = operations[signId];
+  const question = `${num1} ${signType} ${num2}`;
+  const answer = getExpression(num1, num2, signType).toString();
 
   return { question, answer };
 };
