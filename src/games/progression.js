@@ -2,32 +2,32 @@ import getRandomInteger from '../utils/getRandomInteger.js';
 import playGame from '../playGame.js';
 
 const description = 'What number is missing in the progression?';
-const progressLength = 10;
+const progressionLength = 10;
 
 /**
- * Calculates nth symbol of progression
- * param {Number} startNum
- * parama {Number} dif
+ * Calculates nth element of progression
+ * param {Number} startElement
+ * parama {Number} step
  * parama {Number} idx
  * @returns {Number}
  */
-const getProgressionSymbol = (startNum, dif, idx) => startNum + dif * (idx - 1);
+const getProgressionElement = (startElement, step, idx) => startElement + step * idx;
 
 /**
  * Generates progression string
- * param {Number} startNum
- * parama {Number} dif
+ * param {Number} startElement
+ * parama {Number} step
  * parama {Number} missedIdx
  * parama {Number} quantity
  * @returns {String}
  */
-const getProgression = (startNum, dif, quantity) => {
+const getProgression = (startElement, step, quantity) => {
   const progression = [];
 
-  for (let i = 1; i <= quantity; i += 1) {
-    const symbolValue = getProgressionSymbol(startNum, dif, i);
+  for (let i = 0; i < quantity; i += 1) {
+    const elementValue = getProgressionElement(startElement, step, i);
 
-    progression.push(symbolValue);
+    progression.push(elementValue);
   }
 
   return progression;
@@ -38,15 +38,19 @@ const getProgression = (startNum, dif, quantity) => {
  * @returns {Object}
  */
 const getData = () => {
-  const progressDif = getRandomInteger(1, 7);
-  const progressStart = getRandomInteger(1, 25);
-  const progressMissedIdx = getRandomInteger(1, progressLength);
-  const progression = getProgression(progressStart, progressDif, progressLength);
+  const progressionStep = getRandomInteger(1, 7);
+  const progressionStartElement = getRandomInteger(1, 25);
+  const progressionMissedIdx = getRandomInteger(0, progressionLength - 1);
+  const progression = getProgression(progressionStartElement, progressionStep, progressionLength);
 
-  progression[progressMissedIdx - 1] = '..';
+  progression[progressionMissedIdx] = '..';
 
   const question = progression.join(' ');
-  const answer = getProgressionSymbol(progressStart, progressDif, progressMissedIdx).toString();
+  const answer = getProgressionElement(
+    progressionStartElement,
+    progressionStep,
+    progressionMissedIdx,
+  ).toString();
 
   return { question, answer };
 };
