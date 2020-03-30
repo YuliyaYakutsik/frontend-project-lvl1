@@ -1,5 +1,5 @@
 import getRandomInteger from '../utils/getRandomInteger.js';
-import start from '../start.js';
+import playGame from '../playGame.js';
 
 const description = 'Answer "yes" if given number is prime. Otherwise answer "no".';
 const minNumber = 2;
@@ -36,6 +36,6 @@ const getData = () => {
   return { question, answer };
 };
 
-const progression = () => start(description, getData);
+const progression = () => playGame(description, getData);
 
 export default progression;

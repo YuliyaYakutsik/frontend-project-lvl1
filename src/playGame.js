@@ -13,7 +13,7 @@ const say = (text = '') => console.log(text);
  * @param {String} description - description of the game
  * @param {Function} getData - returns question and correct result
  */
-const start = (description, getData) => {
+const playGame = (description, getData) => {
   say('Welcome to the Brain Games!');
 
   const userName = readlineSync.question('May I have your name?');
@@ -50,4 +50,4 @@ const start = (description, getData) => {
   launch(0);
 };
 
-export default start;
+export default playGame;

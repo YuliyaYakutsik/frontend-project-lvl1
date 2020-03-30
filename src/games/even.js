@@ -1,5 +1,5 @@
 import getRandomInteger from '../utils/getRandomInteger.js';
-import start from '../start.js';
+import playGame from '../playGame.js';
 
 const description = 'Answer "yes" if number is even otherwise answer "no".';
 
@@ -21,6 +21,6 @@ const getData = () => {
   return { question, answer };
 };
 
-const even = () => start(description, getData);
+const even = () => playGame(description, getData);
 
 export default even;

@@ -1,5 +1,5 @@
 import getRandomInteger from '../utils/getRandomInteger.js';
-import start from '../start.js';
+import playGame from '../playGame.js';
 
 const description = 'What is the result of the expression?';
 const operations = ['+', '-', '*'];
@@ -51,6 +51,6 @@ const getData = () => {
   return { question, answer };
 };
 
-const calc = () => start(description, getData);
+const calc = () => playGame(description, getData);
 
 export default calc;
