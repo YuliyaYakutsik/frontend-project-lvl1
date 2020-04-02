@@ -21,6 +21,6 @@ const getData = () => {
   return { question, answer };
 };
 
-const even = () => playGame(description, getData);
+const startEvenGame = () => playGame(description, getData);
 
-export default even;
+export default startEvenGame;

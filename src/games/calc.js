@@ -5,13 +5,13 @@ const description = 'What is the result of the expression?';
 const operations = ['+', '-', '*'];
 
 /**
- * Generates maths expression
+ * Calculates maths expression
  * @param {Number} num1
  * @param {Number} num2
  * @param {Number} signType
  * @returns {Object}
  */
-const getExpression = (num1, num2, signType) => {
+const calculateExpression = (num1, num2, signType) => {
   switch (signType) {
     case '+':
       return num1 + num2;
@@ -37,11 +37,11 @@ const getData = () => {
   const signId = getRandomInteger(0, operations.length - 1);
   const signType = operations[signId];
   const question = `${num1} ${signType} ${num2}`;
-  const answer = getExpression(num1, num2, signType).toString();
+  const answer = calculateExpression(num1, num2, signType).toString();
 
   return { question, answer };
 };
 
-const calc = () => playGame(description, getData);
+const startCalcGame = () => playGame(description, getData);
 
-export default calc;
+export default startCalcGame;

@@ -35,6 +35,6 @@ const getData = () => {
   return { question, answer };
 };
 
-const gcd = () => playGame(description, getData);
+const startGcdGame = () => playGame(description, getData);
 
-export default gcd;
+export default startGcdGame;

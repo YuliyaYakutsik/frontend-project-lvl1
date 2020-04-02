@@ -1,6 +1,6 @@
 import readlineSync from 'readline-sync';
 
-const requiredSuccessAttempts = 3;
+const attemptsCount = 3;
 
 /**
  * Says something to user
@@ -22,8 +22,8 @@ const playGame = (description, getData) => {
 
   say(description);
 
-  const launch = (attempt) => {
-    if (attempt === requiredSuccessAttempts) {
+  const playRound = (attempt) => {
+    if (attempt === attemptsCount) {
       say(`Congratulations, ${userName}!`);
 
       return;
@@ -44,10 +44,10 @@ const playGame = (description, getData) => {
 
     say('Correct!');
 
-    launch(attempt + 1);
+    playRound(attempt + 1);
   };
 
-  launch(0);
+  playRound(0);
 };
 
 export default playGame;

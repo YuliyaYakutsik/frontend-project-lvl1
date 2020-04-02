@@ -38,23 +38,23 @@ const getProgression = (startElement, step, quantity) => {
  * @returns {Object}
  */
 const getData = () => {
-  const progressionStep = getRandomInteger(1, 7);
-  const progressionStartElement = getRandomInteger(1, 25);
-  const progressionMissedIdx = getRandomInteger(0, progressionLength - 1);
-  const progression = getProgression(progressionStartElement, progressionStep, progressionLength);
+  const step = getRandomInteger(1, 7);
+  const startElement = getRandomInteger(1, 25);
+  const missedIdx = getRandomInteger(0, progressionLength - 1);
+  const progression = getProgression(startElement, step, progressionLength);
 
-  progression[progressionMissedIdx] = '..';
+  progression[missedIdx] = '..';
 
   const question = progression.join(' ');
   const answer = getProgressionElement(
-    progressionStartElement,
-    progressionStep,
-    progressionMissedIdx,
+    startElement,
+    step,
+    missedIdx,
   ).toString();
 
   return { question, answer };
 };
 
-const progression = () => playGame(description, getData);
+const startProgressionGame = () => playGame(description, getData);
 
-export default progression;
+export default startProgressionGame;

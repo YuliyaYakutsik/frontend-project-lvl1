@@ -36,6 +36,6 @@ const getData = () => {
   return { question, answer };
 };
 
-const progression = () => playGame(description, getData);
+const startPrimeGame = () => playGame(description, getData);
 
-export default progression;
+export default startPrimeGame;
