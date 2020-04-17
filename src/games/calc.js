@@ -8,11 +8,11 @@ const operations = ['+', '-', '*'];
  * Calculates maths expression
  * @param {Number} num1
  * @param {Number} num2
- * @param {Number} signType
+ * @param {Number} operation
  * @returns {Object}
  */
-const calculateExpression = (num1, num2, signType) => {
-  switch (signType) {
+const calculateExpression = (num1, num2, operation) => {
+  switch (operation) {
     case '+':
       return num1 + num2;
 
@@ -34,10 +34,10 @@ const calculateExpression = (num1, num2, signType) => {
 const getData = () => {
   const num1 = getRandomInteger(1, 100);
   const num2 = getRandomInteger(1, 100);
-  const signId = getRandomInteger(0, operations.length - 1);
-  const signType = operations[signId];
-  const question = `${num1} ${signType} ${num2}`;
-  const answer = calculateExpression(num1, num2, signType).toString();
+  const randomOperationIndex = getRandomInteger(0, operations.length - 1);
+  const operation = operations[randomOperationIndex];
+  const question = `${num1} ${operation} ${num2}`;
+  const answer = calculateExpression(num1, num2, operation).toString();
 
   return { question, answer };
 };
